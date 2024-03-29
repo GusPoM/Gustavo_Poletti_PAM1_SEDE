@@ -1,0 +1,68 @@
+<html>
+	<head>
+
+		<title>PW2 1° Bimestre - Form</title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+		<meta name="description" content="testes de PHP">
+		<meta name="keywords" content="HTML, CSS, JavaScript, PAM1">
+		<meta name="author" content="Gustavo Poletti">
+	</head>
+	
+	<body>
+    <script>
+      function MouseOver(pai)
+{
+	pai.setAttribute("src","IMG/caraOver.jpg")
+	pai.style.height = "300px";
+	pai.style.width = "300px";
+	//O evento OnMouseOver é extremamente importaante para adicionar interatividade aos site já
+	//que ele controla eventos para acontecerem quando o usuário leva o mouse para um certo elemento
+}
+function MouseOut(pai)
+{
+	pai.setAttribute("src","IMG/caraNormal.jpg")
+	pai.style.height = "150px";
+	pai.style.width = "150px";
+	//O evento OnMouseOut trabalha muito em conjunto com OnMouseOver, geralmente para reverter seus
+	//efeitos quando o usuário para de interagir com um elemento
+}
+
+function Foco(pai)
+{
+	pai.style.background = "#7f7f7f"; 
+	//OnFocus ativa quando o usuario interage com um elemento, fazendo com que prograamar botões e
+	//coisas do tipo extremamente fácil
+}
+function Blur(pai)
+{
+	pai.style.background = "white";
+	//OnBlur é o oposto de OnFocus, ótimo para responsividade interativa
+}
+function Change()
+{
+	document.querySelector("input").style.background = "#d6fed6"; 	
+	pai.style.background = "white";
+	/*O evento OnChange pode ser usado para adicionar funcionalidade para sistemas de resposta limitada
+	mas de multipla escolha, permitindo que o usuário selecione uma opção e futuramente podemos
+	tratar estes dados fornecidos
+	*/
+}
+    </script>
+		<img onmouseover="MouseOver(this)" onmouseout="MouseOut(this)" border="0" src="IMG/caraNormal.jpg"  width="150" height="150">
+		<br>
+		<p>Uma barra de texto para você por algo:</p>
+		<input type="text" onfocus="Foco(this)" onblur="Blur(this)" placeholder="o que você mais usa?">
+		
+		<select onchange="Change()" onfocus="Foco(this)" onblur="Blur(this)">
+			<option>Carros/Motos</option>
+			<option>Trens</option>
+			<option>Navios</option>
+			<option>Aviões</option>
+		</select>
+
+
+	</body>
+</html>
