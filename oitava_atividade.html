@@ -1,0 +1,44 @@
+<html>
+	<head>
+
+		<title>PAM1 1° Bimestre - Form</title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+		<meta name="description" content="testes de PHP">
+		<meta name="keywords" content="HTML, CSS, JavaScript, PAM1">
+		<meta name="author" content="Gustavo Poletti">
+		
+		<script src="JS/externosimples.js"></script>
+	</head>
+	
+<body>
+  <script>
+    let resultado, n1, n2;
+    function Atividade8()
+    {
+      n1 = parseInt(document.getElementById("n1").value);
+      n2 = parseInt(document.getElementById("n2").value);
+      
+      resultado = parseInt(n1) + parseInt(n2);
+      alert(resultado);
+    }
+  </script>
+    <div>
+        <label> numero 1</label>
+        <input type="text" id="n1">
+    </div>
+    <div>
+        <label> numero 2</label>
+        <input type="text" id="n2">
+
+    </div>
+    <div>
+        <button onclick="Atividade8()">+</button>
+    </div>
+    <p></p>
+
+    
+</body>
+</html>
