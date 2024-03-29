@@ -1,0 +1,62 @@
+<html>
+  <head>
+    
+    <title>PW2 1° Bimestre - Form</title>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta name="description" content="testes de PHP">
+    <meta name="keywords" content="HTML, CSS, JavaScript, PAM1">
+    <meta name="author" content="Gustavo Poletti">
+  </head>
+  
+  <body>
+    <script>
+      function GetID()
+      {
+      	document.getElementById("btnID").style.backgroundColor = "#db3d3d";
+      	/*O getElementById é usado para encontrar elementos com base em seu ID, que geralmente
+      	 etsá prescente em apenas um elemento do código
+      	*/
+      }
+      function GetTag()
+      {
+      	document.getElementsByTagName("button")[1].style.backgroundColor = "#db3d3d";
+      	/*O getElementsByTagName é usado para encontrar elementos com por sua tag, ou seja,
+      	pelo tipo de objeto que eles são (<p>, <h1>, etc.)
+      	como podem existir multiplos elementos com a mesma tag, você deve tratá-la como um vetor
+      	*/
+      }
+      function GetClass()
+      {
+      	document.getElementsByClassName("btnClass")[0].style.backgroundColor = "#db3d3d";
+      	/*O getElementsByClassName é usado para encontrar elementos com por sua classe, que geralmente
+      	etsá prescente em multiplos elementos do código
+      	como podem existir multiplos elementos com a mesma classe, você deve tratá-la como um vetor
+      	*/
+      }
+      function Query()
+      {
+      	document.querySelector("button").style.backgroundColor = "#88bbfe";
+      	//O querySelector() encontra o primeiro elemento a se encaixar numa determinada condição
+      }
+      function QueryAll()
+      {
+      	const botoes = document.querySelectorAll("button");
+      	for (let tm1 = 0; tm1 < botoes.length; tm1++)
+      	{
+      		botoes[tm1].style.backgroundColor = "#88bbfe";
+      	}
+      	//O querySelector() é usado para encontrar TODOS os elementos a se encaixar numa determinada condição
+        //baseada em CSS
+      }
+    </script>
+    
+    <button id="btnID" onclick="GetID()">Este botão muda de cor graças a seu ID</button>
+    <button onclick="GetTag()">Este botão muda de cor graças a sua tag</button>
+    <button class="btnClass" onclick="GetClass()">Este botão muda de cor graças a sua classe</button>
+    <button onclick="Query()">Este botão muda a cor do primeiro botão da página</button>
+    <button class="btnClass" onclick="QueryAll()">Este botão muda a cor de todos os botõeas da página</button>
+  </body>
+</html>
